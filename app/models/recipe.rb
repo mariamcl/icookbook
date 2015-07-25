@@ -1,4 +1,4 @@
 class Recipe < ActiveRecord::Base
-  belongs_to :meal
+  has_and_belongs_to_many :meals
   has_attached_file :picture
 end
