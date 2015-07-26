@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Recipe.create title: "Green Eggs and Ham", category: "Breakfast", ingredients: "eggs, ham", instructions: "Add food coloring to eggs and ham", meals: Meal.where(name: "Yummy")
+
+Meal.create name: "Yummy", recipes: Recipe.where(title: "Green Eggs and Ham")
