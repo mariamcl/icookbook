@@ -1,0 +1,7 @@
+<h1><%= @meal.name %></h1>
+
+<ul>
+	<%= @meal.recipes.each do |recipe| %>
+		<li><%= render "recipe_view", :recipe => recipe %></li>
+	<% end %>
+</ul>
